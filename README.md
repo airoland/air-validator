@@ -9,7 +9,7 @@ License: MIT
 
 使用者须保留文件中的作者版权信息
 
-Version: 1.2.0
+Version: 1.1.8
 
 Notice: jQuery is neccessary.
 
@@ -17,9 +17,13 @@ Notice: jQuery is neccessary.
 
 ##简介
 
-air-validator是一个WEB通用表单验证工具，致力于在尽可能的范围内，以尽量少的代码帮助开发人员完成表单（或输入框）的验证工作。
+air-validator是一个WEB通用表单验证工具，致力于在尽可能的范围内，以尽量高的灵活性、清晰度，并且较少的代码帮助开发人员完成表单（或输入框）的验证工作。
 
-注意：本工具依赖于jQuery，原生JS版本将在以后推出。
+注意：本工具依赖于jQuery，以后会考虑推出原生JS的版本。
+
+##开源说明
+
+目前V1.1.8版本功能已经完备，但代码还有可以优化和精简的地方，因此暂不开源，只提供压缩版本（在dist目录下）。等版本更新到V1.2.0优化以后会全面开源。
 
 ##如何使用
 
@@ -33,8 +37,8 @@ air-validator是一个WEB通用表单验证工具，致力于在尽可能的范�
 
 ```html
 <form id="testform">
-	<input av-type="number" />
-	<button type="button" av-action="submit">submit</button>
+	<input av-bind="number" />
+	<button type="button" av-submit>submit</button>
 </form>
 ```
 
@@ -44,4 +48,6 @@ air-validator是一个WEB通用表单验证工具，致力于在尽可能的范�
 air.validate.form("#testform");
 ```
 
-这样做的效果是，当你点击submit按钮提交时，air-validator会自动验证输入框内是否是数字，如果不是数字，则阻止表单提交，并在上方显示提示。
+这样做的效果是，当你点击submit按钮提交时，air-validator会自动验证输入框的内容是不是整数，如果不是整数，则阻止表单提交，并在上方显示提示。
+
+（未完待续）
